@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const randomizeVisitors = Math.random();
 
-    if (randomizeVisitors > 0.5) {
+    if (randomizeVisitors > 0.6) {
       setVisitors(1);
     }
   }, []);
