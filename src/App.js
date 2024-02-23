@@ -9,8 +9,10 @@ function App() {
 
   useEffect(() => {
     const randomizeVisitors = Math.random();
-
-    if (randomizeVisitors > 0.6) {
+  
+    if (randomizeVisitors <= 0.5) {
+      setVisitors(0);
+    } else {
       setVisitors(1);
     }
   }, []);
@@ -19,7 +21,7 @@ function App() {
     console.log({
       event: 'ctaClick',
       cta: 'button',
-      variant: visitors === 0 ? 'Current version' : 'VariantA version',
+      variant: visitors === 0 ? 'Version A' : 'Version B',
     });
   };
 
